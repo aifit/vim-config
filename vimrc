@@ -73,4 +73,4 @@ let g:NERDTreeWinPos = "left"
 " ================
 silent! nmap <C-p> :Files<CR>
 silent! nmap <C-g> :GFiles<CR>
-silent! nmap <C-f> :Rg!
+silent! nmap <C-f> :Rg<space>
