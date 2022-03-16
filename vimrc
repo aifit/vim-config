@@ -11,7 +11,9 @@ call plug#begin()
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
-	Plug 'dikiaap/minimalist'
+	Plug 'digitaltoad/vim-pug'
+	Plug 'dense-analysis/ale'
+	Plug 'sickill/vim-monokai'
 call plug#end()
 
 
@@ -39,7 +41,7 @@ set mouse=a
 " ================
 set t_Co=256
 syntax on
-colorscheme minimalist
+colorscheme monokai
 
 
 " Airline config
