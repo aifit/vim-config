@@ -1,6 +1,7 @@
 " Vim Pluggins
 " ===============
 call plug#begin()
+
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
 	Plug 'preservim/nerdtree'
@@ -13,9 +14,15 @@ call plug#begin()
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'digitaltoad/vim-pug'
 	Plug 'dense-analysis/ale'
-	Plug 'sickill/vim-monokai'
-call plug#end()
+	Plug 'yggdroot/indentline'
 
+	" Themes
+	" ===============
+	Plug 'dikiaap/minimalist'	
+	Plug 'NLKNguyen/papercolor-theme'
+	Plug 'sickill/vim-monokai'
+
+call plug#end()
 
 " Set encoding
 " ===============
@@ -36,20 +43,24 @@ set termguicolors
 " ===============
 set mouse=a
 
-
 " Color scheme & visual
 " ================
 set t_Co=256
 syntax on
-colorscheme monokai
+colorscheme PaperColor
 
 
 " Airline config
 " ==============
-let g:airline_theme='minimalist'
+let g:airline_theme='papercolor'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled=1
+
+
+" Indentline config - set indent character
+" ==============
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 
 " Buffers map key
