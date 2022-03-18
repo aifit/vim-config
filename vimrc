@@ -24,6 +24,12 @@ call plug#begin()
 
 call plug#end()
 
+
+" Automatically set auto indent on enter
+" ==============
+set autoindent
+
+
 " Set encoding
 " ===============
 set encoding=UTF-8
