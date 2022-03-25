@@ -93,3 +93,7 @@ let g:NERDTreeWinPos = "left"
 silent! nmap <C-p> :Files<CR>
 silent! nmap <C-g> :GFiles<CR>
 silent! nmap <C-f> :Rg<space>
+
+" fzf - exclude node_module & .git
+" ================
+let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .dist \) -prune -o -print'
