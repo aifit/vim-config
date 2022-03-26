@@ -96,4 +96,4 @@ silent! nmap <C-f> :Rg<space>
 
 " fzf - exclude node_module & .git
 " ================
-let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .dist \) -prune -o -print'
+let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .git \) -prune -o -print'
