@@ -5,24 +5,31 @@ call plug#begin()
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
 	Plug 'preservim/nerdtree'
-	Plug 'ryanoasis/vim-devicons'
 	Plug 'editorconfig/editorconfig-vim'
 	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 	Plug 'tpope/vim-fugitive'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
-	Plug 'digitaltoad/vim-pug'
-	Plug 'dense-analysis/ale'
+	Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
 	Plug 'yggdroot/indentline'
 
 	" Themes
 	" ===============
-	Plug 'dikiaap/minimalist'	
 	Plug 'NLKNguyen/papercolor-theme'
-	Plug 'sickill/vim-monokai'
+	Plug 'adrian5/oceanic-next-vim'
 
 call plug#end()
+
+
+" Set font line height
+" ===============
+set linespace=1.3
+
+
+" Fix not working backspace key 
+" ==============
+set backspace=indent,eol,start
 
 
 " Automatically set auto indent on enter
@@ -44,16 +51,17 @@ set number
 " ===============
 set mouse=a
 
+
 " Color scheme & visual
 " ================
 set t_Co=256
 syntax on
-colorscheme PaperColor
+let g:oceanic_italic_comments = 1
+colorscheme oceanicnext
 
 
 " Airline config
 " ==============
-let g:airline_theme='papercolor'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled=1
@@ -61,19 +69,19 @@ let g:airline#extensions#branch#enabled=1
 
 " Indentline config - set indent character
 " ==============
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_char_list = '_'
 
 
 " Buffers map key
 " ===============
-nnoremap ]b :bnext<cr>
-nnoremap [b :bprev<cr>
-
+noremap ]b :bnext<cr>
+noremap [b :bprev<cr>
+nmap <C-b> :Buffers<cr>
 
 " Tabs map key
 " ==============
-nnoremap ]t :tabn<cr>
-nnoremap [t :tabp<cr>
+noremap ]t :tabn<cr>
+noremap [t :tabp<cr>
 
 
 " NERDTree map key
@@ -89,8 +97,19 @@ silent! nmap <C-p> :Files<CR>
 silent! nmap <C-g> :GFiles<CR>
 silent! nmap <C-f> :Rg<space>
 
-" fzf - exclude node_module & .git
+
+" fzf - exclude folder
 " ================
-<<<<<<< HEAD
-let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .dist -o -name .git \) -prune -o -print'
+let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .git -o -name dist -o -name .nuxt \) -prune -o -print'
+
+
+" Signify config
+" ================
+set updatetime=100
+
+
+" Toggle terminal
+" ===============
+noremap <Leader>\t :botright vert term<CR> 
+
 
