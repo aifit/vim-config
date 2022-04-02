@@ -5,6 +5,7 @@ Repo yang berisi .vimrc, file setting untuk Vim yang saya pakai untuk kerjaan fr
 ### Preview
 
 ![Preview Image](https://raw.githubusercontent.com/aifit/vim-config/master/vim_preview.png)
+*Preview Vim dengan terminal yang menjalankan lazygit*
 
 ### Prasyarat
 
@@ -51,6 +52,17 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 Selanjutnya, buka vim dengan jalankan perintah `vim`, lalu jalankan perintah ```:PlugInstall``` tunggu sampai plugin terinstall semua. Lalu restart Vim.
 
 Selesai.
+
+
+### Setup Tambahan
+
+Kalian bisa install ekstensi untuk ```coc``` seperti ```coc-vetur```, ```coc-eslint```, ```coc-prettier```, ```coc-css```, ```coc-tsserver``` dan lain - lain.
+
+Caranya dengan jalankan perintah:
+
+```
+:CocInstall coc-eslint
+```
 
 ### Custom Keymap (shortcut)
 
