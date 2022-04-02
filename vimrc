@@ -22,11 +22,6 @@ call plug#begin()
 call plug#end()
 
 
-" Set font line height
-" ===============
-set linespace=1.3
-
-
 " Fix not working backspace key 
 " ==============
 set backspace=indent,eol,start
