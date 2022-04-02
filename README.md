@@ -2,6 +2,10 @@
 
 Repo yang berisi .vimrc, file setting untuk Vim yang saya pakai untuk kerjaan front-end.
 
+### Preview
+
+![Preview Image](https://raw.githubusercontent.com/aifit/vim-config/master/vim_preview.png)
+
 ### Prasyarat
 
 Pertama, kalian mesti install **Node.js** dan **Yarn** dulu. Nodejs dan Yarn ini nantinya bakal dipakai untuk keperluan saat install plugin Vim. System operasi yang saya gunakan di sini adalah Linux (Ubuntu) & MacOS. Khusus untuk MacOS saya menggunakan ```brew``` sebagai package manager. 
