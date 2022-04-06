@@ -5,6 +5,7 @@ call plug#begin()
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
 	Plug 'preservim/nerdtree'
+	Plug 'posva/vim-vue'
 	Plug 'editorconfig/editorconfig-vim'
 	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 	Plug 'tpope/vim-fugitive'
@@ -13,6 +14,9 @@ call plug#begin()
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
 	Plug 'yggdroot/indentline'
+	Plug 'tpope/vim-unimpaired'
+	Plug 'digitaltoad/vim-pug'
+	Plug 'dense-analysis/ale'
 
 	" Themes
 	" ===============
@@ -53,7 +57,7 @@ set t_Co=256
 syntax on
 let g:oceanic_italic_comments = 1
 colorscheme oceanicnext
-
+" colorscheme PaperColor
 
 " Airline config
 " ==============
@@ -64,7 +68,7 @@ let g:airline#extensions#branch#enabled=1
 
 " Indentline config - set indent character
 " ==============
-let g:indentLine_char_list = '_'
+let g:indentLine_char_list = '.'
 
 
 " Buffers map key
@@ -105,6 +109,47 @@ set updatetime=100
 
 " Toggle terminal
 " ===============
-noremap <Leader>\t :botright vert term<CR> 
+noremap <Leader>\t :botright vert term<CR>
 
 
+" Ignore case to ease search
+" ===============
+set ignorecase
+
+
+" Vue Pug higlighter
+" ===============
+let g:vue_pre_processors = ['pug', 'scss']
+
+" vim ale only run on save
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
+" You can disable this option too
+" if you don't want linters to run on opening a file
+let g:ale_lint_on_enter = 0
+
+
+" Backup dir to remove vim clutters
+set backup
+set backupdir=~/tmp/.vim/backup
+set directory=~/tmp/.vim/tmp
+
+""inoremap { {}<Esc>ha
+""inoremap ( ()<Esc>ha
+""inoremap [ []<Esc>ha
+""inoremap " ""<Esc>ha
+""inoremap ' ''<Esc>ha
+""inoremap ` ``<Esc>ha
+
+
+" show command suggestion
+" ===============
+set wildmode
+
+
+" tab autocomplete command
+" ===============
+set nocompatible
+
+
+set incsearch
