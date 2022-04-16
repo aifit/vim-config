@@ -47,6 +47,12 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
+### Buat Directory `~/tmp` di folder home
+```
+mkdir -p ~/tmp/.vim/backup
+mkdir -p ~/tmp/.vim/tmp
+```
+
 ### Setup VIM
 
 Selanjutnya, buka vim dengan jalankan perintah `vim`, lalu jalankan perintah ```:PlugInstall``` tunggu sampai plugin terinstall semua. Lalu restart Vim.
