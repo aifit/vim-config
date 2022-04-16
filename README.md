@@ -78,6 +78,8 @@ Caranya dengan jalankan perintah:
 | ```ctrl+b``` | tampilkan semua buffer |
 | ```]t``` | pindah ke tab selanjutnya |
 | ```[t``` | pindah ke tab sebelumnya |
+| ```[p``` | paste before current line |
+| ```]p``` | paste in new line |
 
 
 
