@@ -16,7 +16,6 @@ call plug#begin()
 	Plug 'yggdroot/indentline'
 	Plug 'tpope/vim-unimpaired'
 	Plug 'digitaltoad/vim-pug'
-	Plug 'dense-analysis/ale'
 
 	" Themes
 	Plug 'adrian5/oceanic-next-vim'
@@ -88,11 +87,6 @@ set incsearch
 
 " Vue Pug higlighter
 let g:vue_pre_processors = ['pug', 'scss']
-
-" Vim ale only run on save
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_insert_leave = 0
-let g:ale_lint_on_enter = 0
 
 " Backup dir to remove vim clutters
 " Manually create directory first
