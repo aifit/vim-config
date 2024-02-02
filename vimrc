@@ -12,7 +12,7 @@ call plug#begin()
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'	
-	Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+	Plug 'mhinz/vim-signify', { 'branch': 'master' }
 	Plug 'yggdroot/indentline'
 	Plug 'tpope/vim-unimpaired'
 	Plug 'digitaltoad/vim-pug'
